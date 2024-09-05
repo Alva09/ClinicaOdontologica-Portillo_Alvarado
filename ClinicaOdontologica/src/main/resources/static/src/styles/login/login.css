@@ -1,0 +1,190 @@
+/* LIGHT MODE */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+:root {
+  --card-background-color: transparent;
+  --card-border-color: 1px solid rgba(24, 24, 27, 0.08);
+  --card-box-shadow: 0px 3px 6px rgba(24, 24, 27, 0.02), 0px 2px 7px rgba(24, 24, 27, 0.04), 0 0 0 1px rgba(24, 24, 27, 0.08);
+  --card-border-hover: 1px solid rgba(24, 24, 27, 0.15);
+  --card-shadow-hover: 0px 3px 6px rgba(5, 5, 5, 0.107), 0px 8px 15px rgba(0, 0, 0, 0.167);
+  --input-date-icon-attribute: invert(0)
+
+  //General
+  --color-background: #F0F0F0;
+  --color-header-background: #2081C3;
+  --color-header-items: #ececec;
+  --color-header-items-hover: #ffffff;
+  --color-light: #FFFFFF;
+  --color-blue: #2081C3;
+  --color-text-primary: #00426F;
+  --color-text-secondary: #0D0D0D;
+  --color-text-tertiary: #3A3838;
+  --color-danger: #FF1D1D;
+  --color-button-text: #FFFFFF;
+  --color-button-save-background: #2081C3;
+  --color-button-save-background-hover: #00426E;
+  --color-button-cancel-background: #3A3838;
+  --color-button-cancel-background-hover: #FF3535;
+  --color-button-delete-background: #FF3535;
+  --color-button-delete-background-hover: #FF1D1D;
+  --color-card-background: #FFFFFF;
+  --color-card-box-shadow-hover: 0 0 2px 2px rgb(187, 187, 187);
+  --color-border: 1px solid #c2c2c2;
+  --color-form-label: #171717;
+  --color-placeholder-text: #353535;
+  --color-placeholder-text-intro: #1b1b1b;
+  --color-placeholder-background: #dddbdb;
+  --color-input-text: #3A3838;
+  --color-border-input: 1px solid #bdbcbc;
+  --color-table-background: #F3F3F3;
+  --transition-elements: 0.3s ease;
+  --color-modal-background: #FFFFFF;
+}
+
+/* DARK MODE */
+body.dark {
+  --card-background-color: rgba(255, 255, 255, .015);
+  --card-border-color: 1px solid rgba(255, 255, 255, 0.1);
+  --card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.04), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --card-border-hover: 1px solid rgba(255, 255, 255, 0.2);
+  --card-shadow-hover: 0px 5px 10px rgba(156, 156, 156, 0.04), 0px 15px 25px rgba(151, 151, 151, 0.1);
+  --input-date-icon-attribute: invert(1);
+  --color-background: #18181B;
+  --color-header-background: #00426F;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F4F4F4;
+  --color-text-tertiary: #DDDDDD;
+  --color-button-cancel-background: #545454;
+  --color-card-background: #1E1E1E;
+  --color-card-box-shadow-hover: 0 0 2px 2px #303030;
+  --color-border: 1px solid #303030;
+  --color-form-label: #E7E4E4;
+  --color-placeholder-text: #A9A9A9;
+  --color-placeholder-text-intro: #cfcece;
+  --color-placeholder-background: #2c2c2c;
+  --color-input-text: #E6E2E2;
+  --color-border-input: 1px solid #505050;
+  --color-table-background: #1E1E1E;
+  --color-modal-background: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-text-primary);
+  margin-top: 9%;
+}
+body .login {
+  height: 50%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: var(--color-light);
+  display: flex;
+  padding: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body .login .user-icon {
+  height: 27%;
+  width: 27%;
+  border-radius: 50%;
+  margin-top: -130px;
+  background-color: var(--color-blue);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body .login .user-icon img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .login .form-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+body .login .form-box h2 {
+  font-size: 2em;
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+body .login .form-box .input-box {
+  padding: 5px;
+  margin: 5px 0;
+  width: 100%;
+}
+body .login .form-box .input-box p {
+  color: var(--color-text-primary);
+}
+body .login .form-box .input-box input {
+  padding: 15px;
+  background: transparent;
+  width: 100%;
+  margin: 5px 0;
+  outline: none;
+  border-radius: 5px;
+  color: var(--color-text-secondary);
+}
+body .login .form-box .input-box input::-moz-placeholder {
+  color: var(--color-text-primary);
+}
+body .login .form-box .input-box input::placeholder {
+  color: var(--color-text-primary);
+}
+body .login .btn-login {
+  background: var(--color-blue);
+  color: white;
+  padding: 10px 45px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-top: 10%;
+}
+body .login .btn-login:hover {
+  background: var(--color-button-save-background-hover);
+}
+body .side-content {
+  display: grid;
+  justify-items: center;
+}
+body .side-content img {
+  display: flex;
+  height: 95%;
+  width: 95%;
+}
+body .side-content H1 {
+  color: white;
+  margin-top: 5%;
+}/*# sourceMappingURL=login.css.map */

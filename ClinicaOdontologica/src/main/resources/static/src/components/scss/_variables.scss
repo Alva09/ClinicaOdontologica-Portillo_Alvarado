@@ -1,0 +1,130 @@
+/* LIGHT MODE */
+:root{
+
+  //Cards home
+  --card-background-color: transparent;
+  --card-border-color: 1px solid rgba(24, 24, 27, 0.08);
+  --card-box-shadow: 0px 3px 6px rgba(24, 24, 27, 0.02), 0px 2px 7px rgba(24, 24, 27, 0.04), 0 0 0 1px rgba(24, 24, 27, 0.08);
+
+  
+  //Hover
+  --card-border-hover: 1px solid rgba(24, 24, 27, 0.15);
+  --card-shadow-hover: 0px 3px 6px rgba(5, 5, 5, 0.107), 0px 8px 15px rgba(0, 0, 0, 0.167);
+
+  
+  //Icon input type date
+  --input-date-icon-attribute: invert(0)
+  
+  //General
+  --color-background: #F0F0F0;
+  
+  //Header
+  --color-header-background: #2081C3;
+  --color-header-items: #ececec;
+  --color-header-items-hover: #ffffff;
+  
+  //Login
+  --color-light: #FFFFFF;
+  --color-blue: #2081C3;
+
+  //Main
+  --color-text-primary: #00426F;
+  --color-text-secondary: #0D0D0D;
+  --color-text-tertiary: #3A3838;
+  --color-danger: #FF1D1D;
+
+  //Buttons
+  --color-button-text: #FFFFFF;
+    //Save
+    --color-button-save-background: #2081C3;
+    --color-button-save-background-hover: #00426E;
+    //Cancel
+    --color-button-cancel-background:  #3A3838;
+    --color-button-cancel-background-hover: #FF3535;
+    //Delete
+    --color-button-delete-background: #FF3535;
+    --color-button-delete-background-hover: #FF1D1D;
+
+
+  //Cards
+  --color-card-background: #FFFFFF;
+  --color-card-box-shadow-hover: 0  0 2px 2px rgb(187, 187, 187);
+  
+  //Borders
+  --color-border: 1px solid #c2c2c2;
+
+  //Forms
+  --color-form-label: #171717;
+  --color-placeholder-text: #353535;
+  --color-placeholder-text-intro: #1b1b1b;
+  --color-placeholder-background: #dddbdb;
+  --color-input-text: #3A3838;
+  --color-border-input: 1px solid #bdbcbc;
+
+  //Tables
+  --color-table-background: #F3F3F3;
+
+  //Transitions
+  --transition-elements: 0.3s ease;
+
+  //Modals colors
+  --color-modal-background: #FFFFFF;
+
+
+}
+
+/* DARK MODE */
+body.dark{
+
+  //Cards Home
+  --card-background-color: rgba(255, 255, 255, .015);
+  --card-border-color: 1px solid rgba(255, 255, 255, 0.1);
+  --card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.04), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  //Hover
+  --card-border-hover: 1px solid rgba(255, 255, 255, 0.2);
+  --card-shadow-hover: 0px 5px 10px rgba(156, 156, 156, 0.04), 0px 15px 25px rgba(151, 151, 151, 0.1);
+
+  //Icon input type date
+  --input-date-icon-attribute: invert(1);
+
+  //General
+  --color-background: #18181B; 
+  //Header
+  --color-header-background: #00426F; //Header
+
+  //Main
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F4F4F4;
+  --color-text-tertiary: #DDDDDD;
+
+  //Buttons
+    //Cancel
+    --color-button-cancel-background:  #545454;
+
+  //Cards
+  --color-card-background: #1E1E1E;
+  --color-card-box-shadow-hover: 0 0 2px 2px #303030;
+
+
+  //Border
+  --color-border: 1px solid #303030;
+
+  //Forms
+  --color-form-label: #E7E4E4;
+  --color-placeholder-text: #A9A9A9;
+  --color-placeholder-text-intro: #cfcece;
+  --color-placeholder-background: #2c2c2c;
+  --color-input-text: #E6E2E2;
+  --color-border-input: 1px solid #505050;
+
+
+  //Tables
+  --color-table-background: #1E1E1E;
+
+  //Modals colors
+  --color-modal-background: #111111;
+
+
+}
+

@@ -1,0 +1,504 @@
+@charset "UTF-8";
+/* LIGHT MODE */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+:root {
+  --card-background-color: transparent;
+  --card-border-color: 1px solid rgba(24, 24, 27, 0.08);
+  --card-box-shadow: 0px 3px 6px rgba(24, 24, 27, 0.02), 0px 2px 7px rgba(24, 24, 27, 0.04), 0 0 0 1px rgba(24, 24, 27, 0.08);
+  --card-border-hover: 1px solid rgba(24, 24, 27, 0.15);
+  --card-shadow-hover: 0px 3px 6px rgba(5, 5, 5, 0.107), 0px 8px 15px rgba(0, 0, 0, 0.167);
+  --input-date-icon-attribute: invert(0)
+
+  //General
+  --color-background: #F0F0F0;
+  --color-header-background: #2081C3;
+  --color-header-items: #ececec;
+  --color-header-items-hover: #ffffff;
+  --color-light: #FFFFFF;
+  --color-blue: #2081C3;
+  --color-text-primary: #00426F;
+  --color-text-secondary: #0D0D0D;
+  --color-text-tertiary: #3A3838;
+  --color-danger: #FF1D1D;
+  --color-button-text: #FFFFFF;
+  --color-button-save-background: #2081C3;
+  --color-button-save-background-hover: #00426E;
+  --color-button-cancel-background: #3A3838;
+  --color-button-cancel-background-hover: #FF3535;
+  --color-button-delete-background: #FF3535;
+  --color-button-delete-background-hover: #FF1D1D;
+  --color-card-background: #FFFFFF;
+  --color-card-box-shadow-hover: 0 0 2px 2px rgb(187, 187, 187);
+  --color-border: 1px solid #c2c2c2;
+  --color-form-label: #171717;
+  --color-placeholder-text: #353535;
+  --color-placeholder-text-intro: #1b1b1b;
+  --color-placeholder-background: #dddbdb;
+  --color-input-text: #3A3838;
+  --color-border-input: 1px solid #bdbcbc;
+  --color-table-background: #F3F3F3;
+  --transition-elements: 0.3s ease;
+  --color-modal-background: #FFFFFF;
+}
+
+/* DARK MODE */
+body.dark {
+  --card-background-color: rgba(255, 255, 255, .015);
+  --card-border-color: 1px solid rgba(255, 255, 255, 0.1);
+  --card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.04), 0px 8px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --card-border-hover: 1px solid rgba(255, 255, 255, 0.2);
+  --card-shadow-hover: 0px 5px 10px rgba(156, 156, 156, 0.04), 0px 15px 25px rgba(151, 151, 151, 0.1);
+  --input-date-icon-attribute: invert(1);
+  --color-background: #18181B;
+  --color-header-background: #00426F;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F4F4F4;
+  --color-text-tertiary: #DDDDDD;
+  --color-button-cancel-background: #545454;
+  --color-card-background: #1E1E1E;
+  --color-card-box-shadow-hover: 0 0 2px 2px #303030;
+  --color-border: 1px solid #303030;
+  --color-form-label: #E7E4E4;
+  --color-placeholder-text: #A9A9A9;
+  --color-placeholder-text-intro: #cfcece;
+  --color-placeholder-background: #2c2c2c;
+  --color-input-text: #E6E2E2;
+  --color-border-input: 1px solid #505050;
+  --color-table-background: #1E1E1E;
+  --color-modal-background: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-header-background);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  margin: 0 6em;
+}
+header .logo a {
+  text-decoration: none;
+}
+header .logo a .logo-content {
+  display: flex;
+  align-items: center;
+}
+header .logo a .logo-content i {
+  color: white;
+  font-size: 2em;
+}
+header .logo a .logo-content h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+}
+header .navbar {
+  margin: 0 6em;
+  font-weight: 600;
+}
+header .navbar .navbar-nav {
+  color: var(--color-header-items);
+}
+header .navbar .navbar-nav .nav-item {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+header .navbar .navbar-nav .nav-item .nav-link {
+  color: var(--color-header-items);
+  font-weight: 500;
+  font-size: 1em;
+  padding: 0;
+}
+header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--color-header-items-hover);
+}
+header .navbar .navbar-nav .nav-item .nav-link:active {
+  color: var(--color-header-items-hover);
+}
+header .navbar .navbar-nav .nav-item .nav-link .nav-link.show {
+  color: var(--color-header-items-hover);
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+  width: 100%;
+}
+
+.options {
+  margin: 0 6em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.options .btn {
+  padding: 0em;
+  border: none;
+}
+.options .dropdown-toggle::after {
+  display: none; /* Oculta la flecha del botón dropdown */
+}
+.options .dropdown {
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.options .dropdown-menu {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-card-background);
+  color: var(--color-text-secondary);
+  border: var(--card-border-color);
+  box-shadow: var(--card-box-shadow);
+}
+.options .dropdown-item {
+  padding: 0.5em;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+.options .dropdown-item:hover {
+  background-color: #c82333; /* Color de fondo al pasar el mouse */
+}
+.options .dropdown-divider {
+  border-top: 1px solid var(--color-text-secondary);
+}
+.options .user-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff; /* Color de fondo del círculo con la inicial */
+  color: #fff; /* Color del texto (la inicial) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.options #user-name {
+  font-weight: bold;
+}
+.options #user-email {
+  color: #6c757d;
+  font-size: 0.8em;
+}
+.options .logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-button-cancel-background);
+}
+
+/* SWITCH */
+.switch {
+  margin: 0 30% 0 0;
+  background: var(--secondary-color);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch span {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  background: none;
+  color: white;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background-color: rgb(255, 72, 0);
+  color: var(--color-text-primary);
+}
+
+.switch.active::after {
+  left: unset;
+  right: 0;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.content-data {
+  justify-content: center;
+  display: flex;
+}
+
+.list-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.table-title > h2 {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  padding-bottom: 1em;
+}
+
+/* TABLE */
+.container-add-button {
+  padding: 0 0 0.4em 0;
+}
+
+.add-button {
+  padding: 0.2em 0.4em;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-button-save-background);
+  transition: var(--transition-elements);
+}
+
+.add-button:hover {
+  background-color: var(--color-button-save-background-hover);
+}
+
+.add-button > i {
+  color: white;
+}
+
+.table {
+  background-color: var(--card-background-color);
+  border: var(--card-border-color);
+  box-shadow: var(--card-box-shadow);
+  border-collapse: separate;
+  border-radius: 10px;
+  overflow: hidden;
+  border-spacing: 0;
+}
+
+.table th {
+  padding: 0.25rem 0.85rem; /* Espaciado interno de las celdas de encabezado */
+}
+
+.table td {
+  padding: 0.25rem 0.85rem; /* Espaciado interno de las celdas */
+  vertical-align: middle; /* Alineación vertical */
+}
+
+/* BOTONES DE ACCION ELIMINAR O ACTUALIZAR/EDITAR */
+.actions-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_delete, .btn_edit {
+  border-radius: 5px;
+  margin: 0.5em 0.3em;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  transition: var(--transition-elements);
+}
+
+.btn_delete > i, .btn_edit > i {
+  color: white;
+}
+
+.btn_edit {
+  background-color: var(--color-button-save-background);
+}
+
+.btn_edit:hover {
+  background-color: var(--color-button-save-background-hover);
+}
+
+.btn_delete {
+  background-color: var(--color-button-delete-background);
+}
+
+.btn_delete:hover {
+  background-color: var(--color-button-delete-background-hover);
+}
+
+/* FORM */
+.update-form {
+  padding: 5em 0;
+  margin: 0 5em;
+  display: none;
+}
+
+#paciente-updating {
+  background-color: var(--card-background-color);
+  border: var(--card-border-color);
+  box-shadow: var(--card-box-shadow);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.form-control {
+  background-color: var(--color-placeholder-background); /* Fondo del input */
+  border: var(--color-border-input); /* Borde */
+  color: var(--color-placeholder-text-intro); /* Color del texto cuando ya se ha escrito */
+  margin-bottom: 10px;
+}
+
+.form-control:focus {
+  background-color: var(--color-placeholder-background);
+  border-color: var(--color-button-save-background-hover); /* Borde cuando está enfocado */
+  color: var(--color-input-text); /* Color del texto cuando está enfocado */
+}
+
+.form-control::-moz-placeholder {
+  color: var(--color-placeholder-text);
+}
+
+.form-control::placeholder {
+  color: var(--color-placeholder-text);
+}
+
+.form-select {
+  background-color: var(--color-placeholder-background); /* Fondo del input */
+  border: var(--color-border-input); /* Borde */
+  color: var(--color-placeholder-text-intro); /* Color del texto cuando ya se ha escrito */
+  margin-bottom: 10px;
+  appearance: none; /* Eliminar estilos por defecto del navegador */
+  -webkit-appearance: none; /* Compatibilidad con navegadores WebKit */
+  -moz-appearance: none; /* Compatibilidad con Firefox */
+  padding-right: 30px; /* Espacio para la flecha */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23aaa" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Posición de la flecha */
+  background-size: 24px; /* Tamaño de la flecha */
+}
+
+.form-select:focus {
+  background-color: var(--color-placeholder-background);
+  border-color: var(--color-button-save-background-hover); /* Borde cuando está enfocado */
+  color: var(--color-input-text); /* Color del texto cuando está enfocado */
+}
+
+.form-select::-moz-placeholder {
+  color: var(--color-placeholder-text);
+}
+
+.form-select::placeholder {
+  color: var(--color-placeholder-text);
+}
+
+.form-group > label {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: var(--color-button-save-background); /* Color de fondo del botón primario */
+  border: none; /* Sin borde */
+  margin: 0.5em 0; /* Margen superior e inferior */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-button-save-background-hover); /* Color de fondo del botón primario al pasar el ratón */
+}
+
+.btn-secondary {
+  background-color: var(--color-button-cancel-background);
+  border: none;
+  margin: 0.5em 0;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-button-cancel-background-hover);
+}
+
+#response {
+  display: none;
+  margin-top: 10px;
+  color: var(--color-button-text); /* Color del texto de respuesta */
+  text-align: center; /* Alineación del texto */
+}
+
+/* MODAL */
+.modal-content {
+  background-color: var(--color-card-background);
+  color: var(--color-text-secondary);
+}
+
+.btn-close {
+  color: var(--color-text-secondary);
+  background-image: none;
+}
+
+.btn-close:hover {
+  color: var(--color-button-text);
+}
+
+.modal-footer {
+  margin-top: 0.5em;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=pacientes.css.map */

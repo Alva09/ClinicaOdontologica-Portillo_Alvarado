@@ -1,0 +1,102 @@
+@import "../components/scss/variables";
+@import "../components/scss/reset";
+@import "../components/scss/fonts";
+@import "../components/scss/header";
+@import "../components/scss/switch";
+@import "../components/scss/main-structure";
+
+.container-flex {
+
+  .hero {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    .hero-title {
+      width: 100%;
+
+      h1 {
+        color: var(--color-text-primary);
+        font-weight: 600;
+        font-size: 3.5em;
+      }
+    }
+
+
+    .hero-subtitle {
+      width: 100%;
+
+      h3 {
+        color: var(--color-text-primary);
+      }
+    }
+  }
+  .administration{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    .administration-intro{
+      width: 100%;
+      padding: 1em 0;
+      margin: 2em 0;
+      h4{
+        font-weight: 650;
+        color: var(--color-text-secondary);
+      }
+    }
+    .card{
+      width: 18em;
+      margin: 0 1em; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: var(--card-background-color);
+      border: var(--card-border-color);
+      transition: var(--transition-elements);
+      border-radius: 15px; 
+      box-shadow: var(--card-box-shadow);
+      transition: all .25s;
+      .card-image{
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+      }
+      &:hover{
+        box-shadow: var(--card-shadow-hover);
+        border: var(--card-border-hover);
+      }
+      .card-info{
+        height: 10em;
+        padding: 1em;
+        .card-title{
+          color: var(--color-text-secondary);
+        }
+        .card-secondary-text{
+          color: var(--color-text-tertiary);
+        }
+      }
+      .card-button{
+        padding: 2em 1em;
+        align-self: center;
+        a{
+          background-color: var(--color-button-save-background);
+          padding: 1em 4em;
+          border-radius: 5px;
+          text-decoration: none;
+          color: var(--color-button-text);
+          font-weight: 700;
+          
+          &:hover{
+            background-color: var(--color-button-save-background-hover);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
