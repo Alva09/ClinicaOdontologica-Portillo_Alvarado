@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshDent - Ingresar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./src/styles/login/login.css" />
+    <link rel="icon" href="./src/assets/img/icon.svg"/>
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <div class="login">
+            <div class = "user-icon">
+                <img src="./src/assets/img/avatar.png" alt="">
+            </div>
+            <div class="form-box">
+                <h2>Ingresa a tu cuenta</h2>
+                
+                <div id="error-message" class="alert alert-danger" style="display: none;">
+                    <!-- Mensaje de error -->
+                </div> 
+                <div id="logout-message" class="alert alert-success" style="display: none;">
+                    <!-- Mensaje de logout -->
+                </div> 
+                <div class="input-box">
+                    <p>Usuario</p>
+                    <input type="text" placeholder="Ingresa tu username" name="username" required autofocus />
+                </div>
+                <div class="input-box">
+                    <p>Contraseña</p>
+                    <input type="password" placeholder="Ingresa tu contraseña" name="password" required />
+                </div>
+            </div>
+            <button type="submit" class="btn-login">Ingresar</button>
+        </div>
+    </form>
+    <div class ="side-content">
+        <img src="./src/assets/img/limpieza-de-dientes.png" alt="">
+        <h1>FreshDent</h1>
+    </div>
+    <!-- SCRIPT PARA MANEJAR ERRORES -->
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('error')) {
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.innerText = 'Credenciales inválidas, por favor intente nuevamente.';
+                errorMessage.style.display = 'block';
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+            if (params.has('logout')) {
+                const logoutMessage = document.getElementById('logout-message');
+                logoutMessage.innerText = 'Sesión cerrada con éxito.';
+                logoutMessage.style.display = 'block';
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        };
+    </script>
+</body>
+
+</html>

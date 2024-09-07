@@ -1,0 +1,46 @@
+
+/* SWITCH */
+.switch {
+  margin: 0 30% 0 0;
+  background: var(--secondary-color);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch span {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  background: none;
+  color: white;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background-color: rgb(255, 72, 0);
+  color: var(--color-text-primary);
+}
+.switch.active::after {
+  left: unset;
+  right: 0;
+}

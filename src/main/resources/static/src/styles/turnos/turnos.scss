@@ -1,0 +1,240 @@
+@import "../../components/scss/variables";
+@import "../../components/scss/reset";
+@import "../../components/scss/fonts";
+@import "../../components/scss/header";
+@import "../../components/scss/switch";
+@import "../../components/scss/main-structure";
+
+.content-data {
+    justify-content: center;
+    display: flex;
+}
+
+.list-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.table-title>h2 {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+/* TABLE */
+.container-add-button {
+    padding: 0 0 0.4em 0;
+}
+
+.add-button {
+    padding: 0.2em 0.4em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-button-save-background);
+    transition: var(--transition-elements);
+}
+
+.add-button:hover {
+    background-color: var(--color-button-save-background-hover);
+}
+
+.add-button>i {
+    color: white;
+}
+
+.table {
+    background-color: var(--card-background-color);
+    border: var(--card-border-color);
+    box-shadow: var(--card-box-shadow);
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    border-spacing: 0;
+}
+
+.table th {
+    padding: .25rem 3rem;
+    /* Espaciado interno de las celdas de encabezado */
+}
+
+.table td {
+    padding: .25rem 3rem;
+    /* Espaciado interno de las celdas */
+    vertical-align: middle;
+    /* Alineación vertical */
+}
+
+/* BOTONES DE ACCION ELIMINAR O ACTUALIZAR/EDITAR */
+
+.actions-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_delete,
+.btn_edit {
+    border-radius: 5px;
+    margin: 0.5em 0.3em;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    transition: var(--transition-elements);
+}
+
+.btn_delete>i,
+.btn_edit>i {
+    color: white;
+}
+
+.btn_edit {
+    background-color: var(--color-button-save-background);
+}
+
+.btn_edit:hover {
+    background-color: var(--color-button-save-background-hover);
+}
+
+.btn_delete {
+    background-color: var(--color-button-delete-background);
+}
+
+.btn_delete:hover {
+    background-color: var(--color-button-delete-background-hover);
+}
+
+/* FORM */
+
+.update-form {
+    padding: 5em 0;
+    margin: 0 5em;
+    display: none;
+}
+
+#turno_updating {
+    background-color: var(--card-background-color);
+    border: var(--card-border-color);
+    box-shadow: var(--card-box-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.form-control {
+    background-color: var(--color-placeholder-background);
+    /* Fondo del input */
+    border: var(--color-border-input);
+    /* Borde */
+    color: var(--color-placeholder-text-intro)
+        /* Color del texto cuando ya se ha escrito */
+}
+
+.form-control:focus {
+    background-color: var(--color-placeholder-background);
+    border-color: var(--color-button-save-background-hover);
+    /* Borde cuando está enfocado */
+    color: var(--color-input-text);
+    /* Color del texto cuando está enfocado */
+}
+
+.form-control::placeholder {
+    color: var(--color-placeholder-text);
+}
+
+.form-select {
+    background-color: var(--color-placeholder-background);
+    /* Fondo del input */
+    border: var(--color-border-input);
+    /* Borde */
+    color: var(--color-placeholder-text-intro);
+    /* Color del texto cuando ya se ha escrito */
+    margin-bottom: 10px;
+    appearance: none;
+    /* Eliminar estilos por defecto del navegador */
+    -webkit-appearance: none;
+    /* Compatibilidad con navegadores WebKit */
+    -moz-appearance: none;
+    /* Compatibilidad con Firefox */
+    padding-right: 30px;
+    /* Espacio para la flecha */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23aaa" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    /* Posición de la flecha */
+    background-size: 24px;
+    /* Tamaño de la flecha */
+}
+
+.form-select:focus {
+    background-color: var(--color-placeholder-background);
+    border-color: var(--color-button-save-background-hover);
+    /* Borde cuando está enfocado */
+    color: var(--color-input-text);
+    /* Color del texto cuando está enfocado */
+}
+
+.form-select::placeholder {
+    color: var(--color-placeholder-text);
+}
+
+.form-group>label {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+}
+
+
+.btn-primary {
+    background-color: var(--color-button-save-background);
+    /* Color de fondo del botón primario */
+    border: none;
+    /* Sin borde */
+    margin: 0.5em 0;
+    /* Margen superior e inferior */
+}
+
+.btn-primary:hover {
+    background-color: var(--color-button-save-background-hover);
+    /* Color de fondo del botón primario al pasar el ratón */
+}
+
+.btn-secondary {
+    background-color: var(--color-button-cancel-background);
+    border: none;
+    margin: 0.5em 0;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-button-cancel-background-hover);
+}
+
+#response {
+    display: none;
+    margin-top: 10px;
+    color: var(--color-button-text);
+    /* Color del texto de respuesta */
+    text-align: center;
+    /* Alineación del texto */
+}
+
+/* MODAL */
+.modal-content {
+    background-color: var(--color-card-background);
+    color: var(--color-text-secondary);
+}
+
+.btn-close {
+    color: var(--color-text-secondary);
+    background-image: none;
+}
+
+.btn-close:hover {
+    color: var(--color-button-text);
+}
+
+.modal-footer {
+    margin-top: 0.5em;
+}
